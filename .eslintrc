@@ -4,20 +4,33 @@
     "es6": true
   },
   "parser": "@typescript-eslint/parser",
-  "plugins": ["react", "react-hooks", "jsx-a11y", "prettier", "eslint-plugin-import", "@typescript-eslint"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "jsx-a11y",
+    "prettier",
+    "eslint-plugin-import",
+    "@typescript-eslint"
+  ],
   "parserOptions": {
-    "project": ["tsconfig.json"],
+    "project": [
+      "tsconfig.json"
+    ],
     "ecmaVersion": 2020,
     "sourceType": "module",
     "ecmaFeatures": {
-        "jsx": true
+      "jsx": true
     }
-},
+  },
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
-  "extends": ["plugin:@typescript-eslint/recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
   "rules": {
     "prettier/prettier": "warn",
     "import/prefer-default-export": "off",
@@ -45,11 +58,12 @@
       "parserOptions": {
         "project": "./tsconfig.json"
       },
-      "plugins": ["@typescript-eslint/eslint-plugin"],
+      "plugins": [
+        "@typescript-eslint/eslint-plugin"
+      ],
       "extends": [
         "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended",
-        "eslint-config-prettier/@typescript-eslint"
+        "plugin:@typescript-eslint/recommended"
       ]
     }
   ],
@@ -58,12 +72,18 @@
       "root-import": {
         "rootPathPrefix": "@",
         "rootPathSuffix": "src",
-        "extensions": [".js", ".ts", ".tsx", ".jsx", ".mdx"]
+        "extensions": [
+          ".js",
+          ".ts",
+          ".tsx",
+          ".jsx",
+          ".mdx"
+        ]
       }
     },
     "react": {
       "pragma": "React",
       "version": "detect"
-  }
+    }
   }
 }
