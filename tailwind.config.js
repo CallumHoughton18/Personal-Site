@@ -5,8 +5,21 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: theme => ({
-       'main-background': "url('/background.jpg')",
-      })
+        'main-background': "url('/background.jpg')",
+      }),
+      keyframes: {
+        'fade-in': {
+          '0%': {
+            opacity: '0',
+          },
+          '100%': {
+            opacity: '1',
+          },
+        },
+      },
+      animation: {
+        'fade-in': 'fade-in 0.5s ease-out',
+      }
     },
     colors: {
       polarNight: {
@@ -32,7 +45,7 @@ module.exports = {
         yellow: '#ebcb8b',
         orange: '#d08770',
         red: '#bf616a'
-      },  
+      },
       transparent: 'transparent',
       current: 'currentColor',
       black: colors.black,
@@ -50,22 +63,22 @@ module.exports = {
       'card': '33rem'
     },
     flex: {
-      '25':"0 1 25%",
-      '50':"0 1 50%"
+      '25': "0 1 25%",
+      '50': "0 1 50%"
     },
     fontFamily: {
       'sans': ['Helvetica', 'Arial', 'sans-serif'],
     },
     filter: { // defaults to {}
-    'none': 'none',
-    'grayscale': 'grayscale(1)',
-    'invert': 'invert(1)',
-    'sepia': 'sepia(1)',
-  },
-  backdropFilter: { // defaults to {}
-    'none': 'none',
-    'blur': 'blur(3px)',
-  },
+      'none': 'none',
+      'grayscale': 'grayscale(1)',
+      'invert': 'invert(1)',
+      'sepia': 'sepia(1)',
+    },
+    backdropFilter: { // defaults to {}
+      'none': 'none',
+      'blur': 'blur(3px)',
+    },
   },
   variants: {
     filter: ['responsive'], // defaults to ['responsive']

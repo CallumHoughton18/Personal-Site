@@ -1,12 +1,17 @@
 import useProjectImagesQuery from "@/hooks/useProjectImagesQuery";
-import useProjectInfoBuilder from "@/hooks/useProjectInfoBuilder";
+import useProjectInfoBuilder from "@/hooks/useProjectsInfoBuilder";
+import { ProjectInfo } from "@/static_data/types";
 import React, { Fragment } from "react";
 import ProjectCard from "./ProjectCard";
 
-const Projects = (): JSX.Element => {
+type ProjectsProps = {
+  projectsInfo: ProjectInfo[];
+};
+const Projects = ({ projectsInfo }: ProjectsProps): JSX.Element => {
   const projectImageQueryResult = useProjectImagesQuery();
   const projectsWithInfoAndImage = useProjectInfoBuilder(
     projectImageQueryResult,
+    projectsInfo,
   );
 
   const projectCards = projectsWithInfoAndImage.map((project, indx) => {

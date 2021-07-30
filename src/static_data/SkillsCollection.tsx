@@ -7,8 +7,11 @@ import { SiHockeyapp } from "@react-icons/all-files/si/SiHockeyapp";
 import { SiJenkins } from "@react-icons/all-files/si/SiJenkins";
 import { SiPython } from "@react-icons/all-files/si/SiPython";
 import { SiReact } from "@react-icons/all-files/si/SiReact";
+import { SiKotlin } from "@react-icons/all-files/si/SiKotlin";
 import { SiTypescript } from "@react-icons/all-files/si/SiTypescript";
 import { SiXamarin } from "@react-icons/all-files/si/SiXamarin";
+import { SiAndroid } from "@react-icons/all-files/si/SiAndroid";
+import { SiDocker } from "@react-icons/all-files/si/SiDocker";
 
 type SkillsList = {
   languages: ListElement[];
@@ -24,6 +27,14 @@ const SkillsCollection = (): SkillsList => {
       content: (
         <span>
           C# <SiCsharp className={iconStyle} />
+        </span>
+      ),
+    },
+    {
+      id: "kotlin",
+      content: (
+        <span>
+          Kotlin <SiKotlin className={iconStyle} />
         </span>
       ),
     },
@@ -70,6 +81,14 @@ const SkillsCollection = (): SkillsList => {
         </span>
       ),
     },
+    {
+      id: "android",
+      content: (
+        <span>
+          Android <SiAndroid className={iconStyle} />
+        </span>
+      ),
+    },
   ];
 
   const cdAndCI: ListElement[] = [
@@ -94,6 +113,14 @@ const SkillsCollection = (): SkillsList => {
       content: (
         <span>
           Azure DevOps <SiAzuredevops className={iconStyle} />
+        </span>
+      ),
+    },
+    {
+      id: "docker",
+      content: (
+        <span>
+          Docker <SiDocker className={iconStyle} />
         </span>
       ),
     },
