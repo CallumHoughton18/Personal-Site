@@ -13,11 +13,7 @@ const useProjectImagesQuery = (): ProjectImagesQuery => {
         edges {
           node {
             childImageSharp {
-              fluid(maxWidth: 800, quality: 100) {
-                originalName
-                ...GatsbyImageSharpFluid
-                ...GatsbyImageSharpFluidLimitPresentationSize
-              }
+              gatsbyImageData(layout: CONSTRAINED, width: 800, quality: 100)
             }
           }
         }

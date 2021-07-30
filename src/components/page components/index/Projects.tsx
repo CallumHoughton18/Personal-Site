@@ -15,7 +15,7 @@ const Projects = (): JSX.Element => {
         key={indx}
         projectName={project.info.title}
         projectTech={project.info.tech}
-        ProjectImg={project.image}
+        ProjectImg={project.imageSrc}
         projectDesc={project.info.desc}
         projectLinks={project.info.links}
       ></ProjectCard>

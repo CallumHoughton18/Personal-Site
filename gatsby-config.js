@@ -3,14 +3,14 @@ module.exports = {
   // don't need to define it here (just if you need to change the options)
   siteMetadata: {
     title: 'Gatsby Default Starter',
-    menuLinks:[
+    menuLinks: [
       {
-         name: 'home',
-         link: '/'
+        name: 'home',
+        link: '/'
       },
       {
-         name: 'blog',
-         link: '/blog'
+        name: 'blog',
+        link: '/blog'
       },
       {
         name: 'photos',
@@ -65,8 +65,9 @@ module.exports = {
         analyzerPort: 3005,
       }
     },
-    `gatsby-transformer-sharp`, 
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-remark`
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-image`
   ],
 };
