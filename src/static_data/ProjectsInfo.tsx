@@ -17,8 +17,7 @@ const ProjectInfo = (): ProjectInfo[] => {
   return [
     {
       title: "XLSX Data Extractor",
-      desc:
-        "A WPF application built to demonstrate the data extraction capabilities of the XLSX Data Extractor library, which is built on top of OpenXML. The application allows mass data extraction from a collection of XLSX reports",
+      desc: "A WPF application built to demonstrate the data extraction capabilities of the XLSX Data Extractor library, which is built on top of OpenXML. The application allows mass data extraction from a collection of XLSX reports",
       links: [
         {
           icon: <FaGithub className="mr-5" />,
@@ -30,13 +29,11 @@ const ProjectInfo = (): ProjectInfo[] => {
     },
     {
       title: "Mushroom Classifier",
-      desc:
-        "A web app using a Python Flask backend and a TypeScript ReactJS frontend to expose a machine learning model to classify whether a given mushroom is edible or not. Deployed to a VPS using Docker and Jenkins.",
+      desc: "A web app using a Python Flask backend and a TypeScript ReactJS frontend to expose a machine learning model to classify whether a given mushroom is edible or not. Deployed to a VPS using Docker and Jenkins.",
       links: [
         {
           icon: <FaGithub className="mr-5" />,
-          link:
-            "https://github.com/CallumHoughton18/Mushroom-Classification-Front-End",
+          link: "https://github.com/CallumHoughton18/Mushroom-Classification-Front-End",
           className: commonStyle,
         },
         {
@@ -46,8 +43,7 @@ const ProjectInfo = (): ProjectInfo[] => {
         },
         {
           icon: <FaGithub className="mr-5" />,
-          link:
-            "https://github.com/CallumHoughton18/Mushroom-Classification-Deployment",
+          link: "https://github.com/CallumHoughton18/Mushroom-Classification-Deployment",
           className: commonStyle,
         },
         {
@@ -60,8 +56,7 @@ const ProjectInfo = (): ProjectInfo[] => {
     },
     {
       title: "Pi Rover Bot",
-      desc:
-        "A Raspberry Pi Rover Bot that allows a mobile app (built using Xamarin.Forms) to communicate with a web API, built using Python and Django, to control the Pi's GPIO pins",
+      desc: "A Raspberry Pi Rover Bot that allows a mobile app (built using Xamarin.Forms) to communicate with a web API, built using Python and Django, to control the Pi's GPIO pins",
       links: [
         {
           icon: <FaGithub className="mr-5" />,
@@ -83,8 +78,7 @@ const ProjectInfo = (): ProjectInfo[] => {
     },
     {
       title: "Local Crimes Map",
-      desc:
-        "A Python Django project that displays crime data from the data.police.uk RESTful API on a map, and as a report style breakdown. The crime data from the report style breakdown is then saved in a PostGIS",
+      desc: "A Python Django project that displays crime data from the data.police.uk RESTful API on a map, and as a report style breakdown. The crime data from the report style breakdown is then saved in a PostGIS",
       links: [
         {
           icon: <FaGithub className="mr-5" />,
@@ -101,8 +95,7 @@ const ProjectInfo = (): ProjectInfo[] => {
     },
     {
       title: "ChemViewAR",
-      desc:
-        "Allows the viewing of molecular models (sourced from ChemTube3D and the Protein Data Bank) in augmented reality, the models are converted from standard chemical file formats. Built using Unity and ARCore.",
+      desc: "Allows the viewing of molecular models (sourced from ChemTube3D and the Protein Data Bank) in augmented reality, the models are converted from standard chemical file formats. Built using Unity and ARCore.",
       links: [
         {
           icon: <FaGithub className="mr-5" />,
@@ -111,14 +104,12 @@ const ProjectInfo = (): ProjectInfo[] => {
         },
         {
           icon: <FaMobile className="mr-5" />,
-          link:
-            "https://play.google.com/store/apps/details?id=com.Callum.ChemViewAR",
+          link: "https://play.google.com/store/apps/details?id=com.Callum.ChemViewAR",
           className: commonStyle,
         },
         {
           icon: <FaExternalLinkAlt />,
-          link:
-            "https://medium.com/@callumhoughton18/creating-ar-ready-models-from-chemical-file-formats-cc8b927e5339",
+          link: "https://medium.com/@callumhoughton18/creating-ar-ready-models-from-chemical-file-formats-cc8b927e5339",
         },
       ],
       tech: ["C#", "Unity", "Arcore", "Blender"],

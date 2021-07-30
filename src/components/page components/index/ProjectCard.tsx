@@ -1,6 +1,6 @@
 import Card from "@/components/layout/Card";
 import React, { ReactNode } from "react";
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import IconWithLink from "@/components/layout/IconWithLink";
 import { IconWithLinks } from "@/components/types";
 import PillsCollection from "@/components/layout/PillCollection";
@@ -11,7 +11,7 @@ type ProjectCardProps = {
   projectLinks: IconWithLinks[];
   projectDesc: string;
   projectTech: string[];
-  ProjectImg: any;
+  ProjectImg: IGatsbyImageData;
 };
 
 const ProjectCard = ({
@@ -31,14 +31,13 @@ const ProjectCard = ({
       />
     );
   });
-  console.log(ProjectImg);
   return (
     <Card className="max-w-xl overflow-hidden shadow-inner border-none sm:flex-50 xl:flex-25 sm:h-card mt-8 sm:m-8 bg-polarNight-lighter">
-      <StaticImage
-        src={ProjectImg}
+      <GatsbyImage
+        image={ProjectImg}
         alt={`${projectName}-image`}
         className="w-overflow sm:h-56"
-      ></StaticImage>
+      ></GatsbyImage>
       <div className="flex flex-row justify-start text-gray-400 self-start px-6 mt-4 text-xl">
         {projectIcons}
       </div>
