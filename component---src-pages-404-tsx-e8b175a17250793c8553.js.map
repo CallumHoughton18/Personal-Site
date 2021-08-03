@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-404-tsx-e8b175a17250793c8553.js","mappings":"sIAQA,UANiB,kBACf,4BACE","sources":["webpack://callums-blog/./src/pages/404.tsx"],"sourcesContent":["import React from \"react\";\n\nconst NotFound = (): JSX.Element => (\n  <main>\n    <p>Page not found :(</p>\n  </main>\n);\n\nexport default NotFound;\n"],"names":[],"sourceRoot":""}
