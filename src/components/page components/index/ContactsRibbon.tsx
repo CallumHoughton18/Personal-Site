@@ -2,6 +2,7 @@ import React from "react";
 import { FaGithubSquare } from "@react-icons/all-files/fa/FaGithubSquare";
 import { FaTwitterSquare } from "@react-icons/all-files/fa/FaTwitterSquare";
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
+import { ImProfile } from "@react-icons/all-files/im/ImProfile";
 import IconWithLink from "@/components/layout/IconWithLink";
 
 const ContactsRibbon = (): JSX.Element => {
@@ -20,6 +21,10 @@ const ContactsRibbon = (): JSX.Element => {
       <IconWithLink
         icon={<FaLinkedin className={iconStyle} />}
         link="https://uk.linkedin.com/in/callum-houghton-346365114"
+      />
+      <IconWithLink
+        icon={<ImProfile className={iconStyle} />}
+        link="https://callumhoughton18.github.io/super-simple-cv/"
       />
     </div>
   );
