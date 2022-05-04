@@ -4,7 +4,9 @@ import { graphql, useStaticQuery } from "gatsby";
 const useBlogPostsQuery = (): BlogPostsQuery => {
   const posts = useStaticQuery<BlogPostsQuery>(graphql`
     query blogPosts {
-      blog: allMarkdownRemark {
+      blog: allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC }
+      ) {
         posts: nodes {
           frontmatter {
             date(fromNow: true)

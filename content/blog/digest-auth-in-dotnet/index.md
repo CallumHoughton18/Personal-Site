@@ -25,22 +25,24 @@ I'll be using [Httpbin](https://httpbin.org/) to simulate the digest authenticat
 
 * A request is sent, the server responds with a 401, and the response has a header like:
 
-    `WWW-Authenticate: Digest realm="testrealm@host.com",
-                        qop="auth",
-                        nonce="dcd98b7102dd2f0e8b11d0f600bfb0c093",
-                        opaque="5ccc069c403ebaf9f0171e9517f40e41"`
+> WWW-Authenticate: Digest realm="testrealm@host.com",
+> qop="auth",
+> nonce="dcd98b7102dd2f0e8b11d0f600bfb0c093",
+> opaque="5ccc069c403ebaf9f0171e9517f40e41"
+
 * You parse the header and retrieve the realm, qop (quality of protection), nonce, and opaque challenges.
 * Using a combination of the username, password, and nonces you calculate some new hashes and build up an Authorization header like:
 
-    `Authorization: Digest username="Mufasa",
-                     realm="testrealm@host.com",
-                     nonce="dcd98b7102dd2f0e8b11d0f600bfb0c093",
-                     uri="/dir/index.html",
-                     qop=auth,
-                     nc=00000001,
-                     cnonce="0a4f113b",
-                     response="6629fae49393a05397450978507c4ef1",
-                     opaque="5ccc069c403ebaf9f0171e9517f40e41"`
+> Authorization: Digest username="Mufasa",
+> realm="testrealm@host.com",
+> nonce="dcd98b7102dd2f0e8b11d0f600bfb0c093",
+> uri="/dir/index.html",
+> qop=auth,
+> nc=00000001,
+> cnonce="0a4f113b",
+> response="6629fae49393a05397450978507c4ef1",
+> opaque="5ccc069c403ebaf9f0171e9517f40e41"`
+
 * You then resend the request with the given authorization header, which should allow you access to the resource.
 
 A couple of things to note here. One being that in my use case I only needed to use MD5 as my hashing algorithm. Digest authentication can also use SHA-256, and this is usually specified in the challenge `algorithm=SHA-256,` in the WWW-Authenticate header. [Though the mdn web docs suggest this isn't really supported and rarely used](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/WWW-Authenticate) so for simplicity I haven't accounted for my use case.
