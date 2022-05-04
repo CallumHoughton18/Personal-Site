@@ -56,9 +56,18 @@ module.exports = {
         analyzerPort: 3005,
       }
     },
+    {
+      resolve: `gatsby-transformer-remark`, 
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+          }, 
+        ], 
+      }, 
+    },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-remark`,
+    `gatsby-plugin-sharp`,   
     `gatsby-plugin-image`
   ],
 };

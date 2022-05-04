@@ -1,5 +1,6 @@
 import "./src/scss/index.scss";
 import "./src/scss/globals.scss";
+import "./src/scss/code-theme.scss";
 
 import { snowStorm, isInFestiveSeason } from "./src/easter_eggs/snowStorm";
 

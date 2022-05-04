@@ -15,11 +15,12 @@ const BlogPost = ({ data }: BlogPostProps): JSX.Element => {
   const parsedDate = new Date(post.frontmatter.date);
   return (
     <PageWithNavBar header={<Header />}>
-      <div className="blogpost">
+      <article className="blogpost">
         <span className="title">{post.frontmatter.title}</span>
+        <br />
         <small>{`${parsedDate.toDateString()}`}</small>
         <div dangerouslySetInnerHTML={{ __html: post.html }} className="body" />
-      </div>
+      </article>
     </PageWithNavBar>
   );
 };

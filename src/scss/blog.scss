@@ -1,10 +1,13 @@
 .blogpost {
-  @apply flex flex-col leading-relaxed text-sm justify-center items-center ml-2 mr-2 md:ml-20 md:mr-20 mt-5 mb-5 bg-polarNight bg-opacity-90 text-gray-300 pr-5 pl-5 md:pr-10 md:pl-10 pt-3 pb-3 rounded-md;
+  @apply leading-relaxed text-sm justify-center items-center ml-2 mr-2 md:ml-20 md:mr-20 mt-5 mb-5 bg-polarNight bg-opacity-90 text-gray-300 pr-5 pl-5 md:pr-10 md:pl-10 pt-10 pb-10 rounded-md;
   small {
-    @apply mt-1 text-xs text-gray-400 italic self-start mb-8 lg:mb-20;
+    @apply mt-1 text-xs text-gray-400 italic self-start;
   }
   .title {
     @apply text-2xl sm:text-4xl lg:text-5xl self-start leading-tight tracking-wide mt-6 font-semibold text-snowStorm;
+  }
+  .body {
+    @apply mt-8 lg:mt-14
   }
   h1,
   h2 {
@@ -21,7 +24,8 @@
   }
   ul,
   ol {
-    @apply mb-4 ml-8;
+    @apply mb-4 ml-8 list-disc;
+    
   }
   blockquote {
     @apply p-2 mx-6 bg-snowStorm-darkest text-polarNight mb-4 border-l-4 border-gray-400 italic;

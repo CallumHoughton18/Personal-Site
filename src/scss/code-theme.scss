@@ -8,6 +8,7 @@
  code[class*="language-"]{
      // without this the code blocks fuck up the padding/margin of all the blog posts (???)
      margin-left: 0px;
+     overflow-x:auto
  }
  pre[class*="language-"] {
 	color: #f8f8f2;
