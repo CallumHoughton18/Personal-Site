@@ -11,7 +11,7 @@ const PersonalProjectsInfo = (): ProjectInfo[] => {
   return [
     {
       title: "NotifyMe",
-      desc: "A blazor server app that is focused on providing a self-hostable open source solution that allows users to save and schedule notifications that can be sent to any device which supports web push notifications. The demo is hosted my VPS.",
+      desc: "A blazor server app that is focused on providing a self-hostable open source solution that allows users to save and schedule notifications that can be sent to any device which supports web push notifications. The demo is hosted on my VPS.",
       links: [
         {
           icon: <FaGithub className="mr-5" />,
