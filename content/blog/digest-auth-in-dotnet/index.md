@@ -41,7 +41,7 @@ I'll be using [Httpbin](https://httpbin.org/) to simulate the digest authenticat
 > nc=00000001,
 > cnonce="0a4f113b",
 > response="6629fae49393a05397450978507c4ef1",
-> opaque="5ccc069c403ebaf9f0171e9517f40e41"`
+> opaque="5ccc069c403ebaf9f0171e9517f40e41"
 
 * You then resend the request with the given authorization header, which should allow you access to the resource.
 
