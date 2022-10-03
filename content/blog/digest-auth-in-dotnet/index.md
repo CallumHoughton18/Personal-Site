@@ -4,6 +4,8 @@ author: Callum Houghton
 date: 2022-05-04
 ---
 
+**UPDATE (03/10/2022): .NET 6 should now successfully do digest authentication, [as kindly pointed by someone in the example repository](https://github.com/CallumHoughton18/csharp-dotnet-digest-authentication/issues/1). Should save you the hassle of doing it manually, like in this blog post!**
+
 'The HttpClient class should handle this' I hear you say. Well, unfortunately setting network credentials on a HttpClient instance didn't seem to work for me. [Multiple](https://stackoverflow.com/questions/62190100/c-sharp-httpclient-digest-authentication-not-work) [people](https://stackoverflow.com/questions/59939357/net-core-httpclient-digest-authentication) [seem](https://stackoverflow.com/questions/65761976/net-5-httpclient-digest-authentication) [to](https://github.com/dotnet/runtime/issues/50283) be reporting that they also were running into issues. I couldn't find any information as to whether this should be fixed in .NET 6, plus I needed it to be portable to .NET Framework 4.8 (💀💀💀). Either way, I'm going to run through how I implemented digest authentication as an extension method for the HttpClient class.
 
 **TL;DR: You can read the code in my GitHub repository [here](https://github.com/CallumHoughton18/csharp-dotnet-digest-authentication), the README provides an example usage. For one request we generate two requests using my method as nothing (nonces, nonce counts) is cached. You can probably cache the header and implement the nonce count properly but that is beyond the scope of what I needed.**
