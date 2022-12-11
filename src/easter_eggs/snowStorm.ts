@@ -109,8 +109,9 @@ export const snowStorm = (): void => {
 export const isInFestiveSeason = (givenDate: Date): boolean => {
   const dateCopy = new Date(givenDate.getTime());
   const givenYear = dateCopy.getFullYear();
-  const beginningFestiveSeason = new Date(givenYear, 11, 19);
+  const beginningFestiveSeason = new Date(givenYear, 11, 1);
   const endFestiveSeason = new Date(givenYear + 1, 0, 6);
+  console.log(beginningFestiveSeason);
 
   givenDate.setDate(dateCopy.getDate() + 1);
   return dateCopy >= beginningFestiveSeason && dateCopy < endFestiveSeason;
