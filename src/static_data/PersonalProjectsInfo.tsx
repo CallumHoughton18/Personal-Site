@@ -128,7 +128,7 @@ const PersonalProjectsInfo = (): ProjectInfo[] => {
         },
         {
           icon: <FaExternalLinkAlt />,
-          link: "https://localcrimesmap.herokuapp.com/",
+          link: "https://localcrimesmap.callums-stuff.net/",
           className: commonStyle,
         },
       ],
